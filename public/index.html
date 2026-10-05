@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPU Usage Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>⚡ GPU Usage Tracker</h1>
+
+    <div class="card">
+      <label for="gpu">Choose GPU</label>
+      <select id="gpu"></select>
+      <button id="toggle">Start Session</button>
+
+      <div class="stats">
+        <div class="stat"><b id="time">00:00:00</b><span>Time used</span></div>
+        <div class="stat"><b id="cost">$0.0000</b><span>Current cost</span></div>
+      </div>
+      <div class="bar"><div id="util"></div></div>
+      <label id="utilLabel">GPU utilization: idle</label>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <strong>Billing summary</strong>
+        <button class="ghost" id="clear">Clear history</button>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="totalTime">0m</b><span>Total GPU time</span></div>
+        <div class="stat"><b id="totalCost">$0.00</b><span>Total bill</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <strong>Session history</strong>
+      <div class="table" id="history"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
